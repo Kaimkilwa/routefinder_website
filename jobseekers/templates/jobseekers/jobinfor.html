@@ -1,0 +1,78 @@
+
+{% extends "menu/base.html"%}
+{% load widget_tweaks %}
+{% block content %}
+<br>
+<br>
+
+<section style=" " id="about" class="clearfix ">
+  <div class="container icon-box wow fadeInUp">
+   
+    <div class="row ">
+          <div class="col-md-3 fixed">
+            <div class="card card-outline card-primary">
+              <div class="card-header" style="background-color:#0033cc;color: #ffffff; ">
+                <h3 class="card-title">Job Information</h3>
+
+
+                <div class="card-tools">
+                  <!-- <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i> -->
+                  <!-- </button> -->
+                </div>
+                <!-- /.card-tools -->
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body" style="display: block;">
+                
+              <p>  THANKS , your submitted your personal infor , now it is a time for Jobinformation</p>
+
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+          <div class="col-md-6">
+            <div class="card card-outline card-success">
+              <div class="card-header"style="background-color:#0033cc;color: #ffffff;" >
+                <h3 class="card-title">Add your Job information</h3>
+                
+                <div class="card-tools">
+                  <!-- <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i> -->
+                  <!-- </button> -->
+                </div>
+                <!-- /.card-tools -->
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                 <form  action="" method="post" novalidate role="form" enctype="multipart/form-data"  >{% csrf_token %}
+                  {% include 'jobseekers/jobseekerform.html' with form=form %}
+              <button type="submit" title="Send your information" class="btn btn-primary">Submit</button>
+                </form>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+          
+          <!-- /.col -->
+          <div class="col-md-3">
+            <div class="card card-outline card-danger">
+              <div class="card-header" style="background-color:#0033cc;color: #ffffff;">
+                <h3 class="card-title">RouteFinder</h3>
+              </div>
+              <div class="card-body">
+                <p>RouteFinder Human Capital is an advisory firm in the area of human capital development and real estate finance &amp; investment. Previously is was formerly known as Route Finder East Africa before the end of 2018, whereby the company transform to RouteFinder Human Capital focusing to provide human capital comprehensive solutions to corporates, organizations and public institutions as well as to foreign and local investors/developer in real estate and construction sector. We essentially give your business a clear route to success.</p>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+
+  </div>
+</section>
+
+{% endblock content %}

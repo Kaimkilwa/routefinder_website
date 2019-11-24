@@ -1,0 +1,54 @@
+{% load static %}
+
+ 
+<header id="header" class="fixed-top">
+  
+    <div class="container">
+      <div class="logo float-left">
+       <!--  Uncomment below if you prefer to use an image logo -->
+       <!--  <h1 class="text-light"><a href="#header"><span>NewBiz</span></a></h1> -->
+        <a href="{% url 'menu:home' %}" class="scrollto">
+          <img  style="padding-top: 0; width: 100%; min-height:53px; margin-top: 0;" src="{% static 'img/logo2.png '%}" alt="" class="img-fluid"></a>
+      </div>
+    <nav class="nav social-nav pull-right d-none d-lg-inline">
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-envelope"></i></a>
+    </nav>
+    
+      <nav class="main-nav float-right d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="{% url 'menu:home' %}"><i class="fa fa-home fa-fw" aria-hidden="true"></i>Home</a></li>
+          <li><a href="{% url 'menu:service'%}">Our Services</a></li>
+          
+          <li class="drop-down"><a href="{% url 'menu:Profile' %}"> About Us</a>
+            <ul>
+              <li><a href="{% url 'menu:ourteam' %}">Our Team</a></li>
+              <li class="drop-down"><a href=""> Documents</a>
+                <ul>
+                  <li><a href="{% url 'menu:vision'%}"> Our Vision</a></li>
+                  <li><a href="{% url 'menu:vision'%}"> Our Mission</a></li>
+                  <li><a href="{% url 'menu:Profile' %}">Company's Profile</a></li>
+                  <li><a href="#">legal document</a></li>
+                  <li><a href="#"></a></li>
+                </ul>
+              </li>
+              <li><a href="{% url 'menu:contact'%}" >Contact Us</a></li>
+              <li><a href="{% url 'menu:Profile' %}">About Us</a></li>
+              <li><a href="{% url 'menu:associates'%}">  Our Associate Consultants</a></li>
+            </ul>
+          </li>
+           <li><a href="{% url 'employers:emplyerhome'%}">Employers</a></li>
+          <li><a href="{% url 'jobseekers:jobseekerpersoninfor'%}">Job Seekers </a></li>
+          <li><a href="{% url 'menu:ourclients' %}">Our Client</a></li>
+        </ul>
+      </nav><!-- .main-nav -->
+    </div>
+
+  
+  </header>
+  
+
+
+

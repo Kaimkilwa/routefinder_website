@@ -1,0 +1,29 @@
+<br>
+<br>
+{% extends "menu/base.html"%}
+
+{% block content %}
+{% for vision1 in companyvision%}
+ <section id="about" class="contact-form animated fadeInUp" >
+      <div class="container">
+        <div class="card text-center">
+          <div style=" background-color: #004a99; color: white;" class="card-header">
+   Company's Mssion and Vision
+        </div>
+        <div class="card-body">
+        <h5  class="card-title"><b>VISION</b></h5>
+        <p class="card-text">{{vision1.vision|safe}}</p>
+        <h5  class="card-title"><b>MISSION</b></h5>
+         <p class="card-text">{{vision1.mission|safe}}</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+
+        </div>
+      <div  style="background-color: #004a99;" class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
+      </div>
+    </section>
+ 
+          {%endfor%}
+{%endblock content%}

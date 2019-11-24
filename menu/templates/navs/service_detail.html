@@ -1,0 +1,58 @@
+ {% extends "menu/base.html"%}
+{% block content %}
+
+<br>
+
+ {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+ <section id="services" class="section-bg">
+      <div class="container">
+        <header  style="background-color:#0033cc;  " class="section-header">
+          <h3 style="color: #ffffff;">Services</h3>
+          <p style="color: #ffffff;">We are specialized in the following services;.</p>
+        </header>
+        <form action="{% url 'menu:applications' category.id %}" method="post"> {%csrf_token %}
+        {% for sub_service in category.servicemodel_set.all %}
+        <div class="row " >
+          <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="header"> <small>{{sub_service.category}}</small></div>
+              <!-- <div class="icon"><i class="ion-ios-bookmarks-outline" style="color: #4680ff; margin-right:200px; "></i></div> -->
+
+                <input type="checkbox"  name="choice" id="sub_service{{ forloop.counter }}" value="{{sub_service.id }}">
+              <h4 style="display:inline-flex;" class="title"><a href="">{{sub_service.title|linebreaks|safe }}</a></h4>
+              <!-- <p class="description">{{sub_service.description|safe|linebreaks }}</p> -->
+              
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-duration="1.4s" >
+            <div class="box" >
+              
+              <div class="icon"><i class="ion-ios-bookmarks-outline" style="color: #4680ff; margin-right: 56px; "></i>
+              </div>
+             <img src="{{ sub_service.file.url }}  " style="width: 400px; margin-left: 15px;" class="img-fluid" alt="">
+              <h4  class="title"></h4>
+              <p class="description"> </p>
+            </div>
+          </div>
+          <hr style="">
+        </div>
+    
+       {% empty %}
+    <div>
+    <div class="alert alert-danger" role="alert">
+   Sorry! no more Dateil for this Service.
+   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+  </div>
+     {%endfor%}
+
+     <input class="btn btn-primary" type="submit" value="Apply for the services">
+       
+      </div>
+         </form>
+     }
+    </section>}
+    {% endblock content %}
+

@@ -1,0 +1,39 @@
+<br>
+{% extends "menu/base.html"%}
+{% block content %}
+<section id="team">
+      <div class="container">
+        <div class="section-header">
+          <h3>Our Team</h3>
+          <p>Routefinder is absolutely dependent upon its talented team which possess the right skills, attitude, devotion and passion 
+to ensuring that client’s HR related challenges are sorted at affordable cost. We are accountable for the highest standards 
+of behavior including honesty and fairness in all aspects of consultancy services offered by the firm.</p>
+        </div>
+
+        <div class="row">
+      {% for team in ourteam %}
+          <div class="col-lg-3 col-md-6 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+            <div class="member">
+              <img style=" width: 200px;  height:200px;" src="{{team.image.url}}" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>{{team.name}}</h4>
+                  <span>{{team.title}}</span>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {% endfor %}
+
+        </div>
+
+      </div>
+    </section>
+    {%endblock content%}

@@ -1,0 +1,82 @@
+
+<footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 footer-info">
+            <h3>RouteFinder</h3>
+            <p>RouteFinder Human Capital is an advisory firm in the area of human 
+              capital development and real estate finance & investment.</p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="{% url 'menu:home' %}">Home</a></li>
+              <li><a href="{% url 'menu:Profile' %}">About us</a></li>
+              <li><a href="{% url 'menu:service'%}">Services</a></li>
+              <li><a href="#">Terms of service</a></li>
+              <li><a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            
+            <p>
+               Afya House Building <br>
+              round Floor Plot No.47 
+              Opposite Clouds FM Building,Mlalakua Road, 
+              Mikocheni,<br>
+               Dar Es Salaa, Tanzania. <br>
+              <strong>Phone:</strong> +255785366168<br>
+              <strong>Email:</strong> www.rf-ea.combr>
+            </p>
+
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>We have posted new brand service in the current package of seervice. 
+            Subscribe to get the upadates.</p>
+            <form action="/subcribers/" method="post">{% csrf_token %}
+              <input type="email" required="Enter your Email" name="email"><input type="submit"  value="Subscribe" required="Enter your Email">
+            
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>ROUTEFINDER</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=NewBiz
+        -->
+          Designed and maintained by
+          <a href="https://github.com/Kaimkilwa" target="_blank" style="text-decoration: none;">
+            <svg style="margin-bottom: -3px; margin-right: 2px;" viewBox="0 0 64 64" width="16" height="16">
+              <path stroke-width="0" fill="currentColor" d="M32 0 C14 0 0 14 0 32 0 53 19 62 22 62 24 62 24 61 24 60 L24 55 C17 57 14 53 13 50 13 50 13 49 11 47 10 46 6 44 10 44 13 44 15 48 15 48 18 52 22 51 24 50 24 48 26 46 26 46 18 45 12 42 12 31 12 27 13 24 15 22 15 22 13 18 15 13 15 13 20 13 24 17 27 15 37 15 40 17 44 13 49 13 49 13 51 20 49 22 49 22 51 24 52 27 52 31 52 42 45 45 38 46 39 47 40 49 40 52 L40 60 C40 61 40 62 42 62 45 62 64 53 64 32 64 14 50 0 32 0 Z"></path>
+            </svg>
+          </a>
+          <a href="https://github.com/Kaimkilwa" target="_blank">Kaimukilwa Tech</a><br>2019
+    
+      </div>
+    </div>
+  </footer>
